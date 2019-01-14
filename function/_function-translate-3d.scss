@@ -8,9 +8,13 @@
 
 @function translate-3d($x, $y, $z) {
 
-	@if ($direction == rtl) {
-		$x: invert($x);
-	}
-
-	@return translate($x, $y, $z);
+  @if ($direction == rtl) {
+    $x: invert($x);
+  }
+  @if (variable-exists('z')) {
+    @return translate3d($x, $y, $z);
+  }
+  @else {
+    @return translate($x, $y);
+  }
 }
