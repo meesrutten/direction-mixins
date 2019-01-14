@@ -1,0 +1,9 @@
+/**	
+	* Returns reverse for CSS keyframe animations when direction is right to left
+	*/
+
+@function RTLreverse() {
+	@if($direction == rtl) {
+		@return reverse;
+	}
+}
