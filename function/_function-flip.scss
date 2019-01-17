@@ -5,5 +5,8 @@
 @function flip() {
 	@if($direction == rtl) {
 		@return scaleX(-1);
+	} 
+	@else {
+		@return scaleX(1);
 	}
 }
